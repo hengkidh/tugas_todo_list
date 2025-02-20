@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_todo_list/pages/homepage.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -39,7 +40,11 @@ class LoginPage extends StatelessWidget {
                 child: SizedBox(
                     width: double.infinity,
                     child: FilledButton(
-                        onPressed: () {}, child: const Text('Login'))),
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => HomePage()));
+                        },
+                        child: const Text('Login'))),
               ),
             ])));
   }
