@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_todo_list/pages/homepage.dart';
 import 'package:tugas_todo_list/pages/login.dart';
+import 'package:tugas_todo_list/pages/profile.dart';
+import 'package:tugas_todo_list/pages/setting.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,8 +35,15 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+        '/profile': (context) => ProfilePage(),
+        '/settings': (context) => SettingPage(),
+      },
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const LoginPage(),
+      // home: const LoginPage(),
     );
   }
 }
